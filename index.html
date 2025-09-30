@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtGuard - Professional Art Protection Platform</title>
+    <link rel="stylesheet" href="artguard-final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Marketing Landing Page -->
+    <div id="marketing-page" class="page active">
+        <!-- Navigation -->
+        <nav class="marketing-nav">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>ArtGuard</span>
+                </div>
+                <div class="nav-menu">
+                    <a href="#features" onclick="scrollToSection('features')">Features</a>
+                    <a href="#how-it-works" onclick="scrollToSection('how-it-works')">How It Works</a>
+                    <a href="#pricing" onclick="scrollToSection('pricing')">Pricing</a>
+                    <a href="#" onclick="showLogin(); return false;" class="btn-outline">Sign In</a>
+                    <a href="#" onclick="showSignup(); return false;" class="btn-primary">Get Started Free</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Protect Your Digital Art<br>
+                    <span class="gradient-text">From Theft to Revenue</span>
+                </h1>
+                <p class="hero-subtitle">
+                    AI-powered watermarking, 24/7 monitoring, and automated legal enforcement.<br>
+                    Join 50,000+ artists protecting their work worldwide.
+                </p>
+                <div class="hero-cta">
+                    <button class="btn-hero" onclick="showSignup()">
+                        <i class="fas fa-rocket"></i>
+                        Start Protecting For Free
+                    </button>
+                    <button class="btn-hero-outline" onclick="scrollToSection('how-it-works')">
+                        <i class="fas fa-play-circle"></i>
+                        See How It Works
+                    </button>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-check"></i>
+                        <span>50K+ Protected Works</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>95% Detection Rate</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>$2M+ Recovered</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Everything You Need to Protect Your Art</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>Invisible Watermarking</h3>
+                        <p>Advanced AI embeds undetectable watermarks that survive cropping, resizing, and filters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-radar"></i>
+                        </div>
+                        <h3>24/7 Monitoring</h3>
+                        <p>Continuous scanning across 50+ platforms including Instagram, Pinterest, and marketplaces.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3>DMCA Automation</h3>
+                        <p>One-click takedown notices with auto-generated legal documents and platform submission.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Legal Network</h3>
+                        <p>Connect with specialized IP lawyers for complex cases and litigation support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Opt-Out</h3>
+                        <p>Prevent your work from being used to train AI models with embedded opt-out metadata.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Analytics & Reports</h3>
+                        <p>Track protection status, threat patterns, and case outcomes with detailed insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How ArtGuard Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Upload Your Art</h3>
+                            <p>Simply drag and drop your digital artwork. We'll embed invisible watermarks and AI opt-out tags.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>We Monitor 24/7</h3>
+                            <p>Our AI scans 50+ platforms continuously, detecting unauthorized use even after modifications.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Get Instant Alerts</h3>
+                            <p>Receive notifications when infringements are detected, with evidence and similarity scores.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Take Action</h3>
+                            <p>One-click DMCA takedowns, lawyer connections, or negotiate settlements directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Choose Your Protection Plan</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="amount">$9</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Up to 10 protected works</li>
+                            <li><i class="fas fa-check"></i> Basic monitoring</li>
+                            <li><i class="fas fa-check"></i> Email alerts</li>
+                            <li><i class="fas fa-check"></i> Manual DMCA tools</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                        </ul>
+                        <button class="btn-pricing" onclick="selectPlan('starter')">Get Started</button>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="popular-badge">Most Popular</div>
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="amount">$29</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Up to 100 protected works</li>
+                            <li><i class="fas fa-check"></i> Advanced AI monitoring</li>
+                            <li><i class="fas fa-check"></i> Instant push alerts</li>
+                            <li><i class="fas fa-check"></i> Automated DMCA filing</li>
+                            <li><i class="fas fa-check"></i> Legal network access</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                        </ul>
+                        <button class="btn-pricing primary" onclick="selectPlan('professional')">Start Free Trial</button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="amount">$99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i> Unlimited protected works</li>
+                            <li><i class="fas fa-check"></i> Real-time monitoring</li>
+                            <li><i class="fas fa-check"></i> Custom alert rules</li>
+                            <li><i class="fas fa-check"></i> Dedicated legal counsel</li>
+                            <li><i class="fas fa-check"></i> API access</li>
+                            <li><i class="fas fa-check"></i> White-label options</li>
+                            <li><i class="fas fa-check"></i> 24/7 phone support</li>
+                        </ul>
+                        <button class="btn-pricing" onclick="selectPlan('enterprise')">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="marketing-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>ArtGuard</span>
+                        </div>
+                        <p>Protecting digital artists worldwide</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login/Signup Modal -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-overlay" onclick="closeAuth()"></div>
+        <div class="modal-content auth-modal">
+            <button class="modal-close" onclick="closeAuth()">&times;</button>
+            
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your ArtGuard account</p>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-auth">Sign In</button>
+                </form>
+                <p class="auth-switch">
+                    Don't have an account? 
+                    <a href="#" onclick="switchToSignup(); return false;">Sign up</a>
+                </p>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form" style="display: none;">
+                <h2>Get Started Free</h2>
+                <p>Create your ArtGuard account</p>
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" required placeholder="••••••••">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the Terms of Service and Privacy Policy</label>
+                    </div>
+                    <button type="submit" class="btn-auth">Create Account</button>
+                </form>
+                <p class="auth-switch">
+                    Already have an account? 
+                    <a href="#" onclick="switchToLogin(); return false;">Sign in</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Container (shown after login) -->
+    <div id="app-container" class="page">
+        <div class="app-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <div class="logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>ArtGuard</span>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-view="dashboard" onclick="showAppView('dashboard'); return false;">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="upload" onclick="showAppView('upload'); return false;">
+                        <i class="fas fa-upload"></i>
+                        <span>Upload</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="artworks" onclick="showAppView('artworks'); return false;">
+                        <i class="fas fa-images"></i>
+                        <span>My Artworks</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="alerts" onclick="showAppView('alerts'); return false;">
+                        <i class="fas fa-bell"></i>
+                        <span>Alerts</span>
+                        <span class="badge">3</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="cases" onclick="showAppView('cases'); return false;">
+                        <i class="fas fa-gavel"></i>
+                        <span>Legal Cases</span>
+                    </a>
+                    <a href="#" class="nav-item" data-view="subscription" onclick="showAppView('subscription'); return false;">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Subscription</span>
+                    </a>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <div class="user-profile" onclick="toggleUserMenu()">
+                        <img src="https://ui-avatars.com/api/?name=Art+User&background=667eea&color=fff" alt="User">
+                        <div class="user-info">
+                            <div class="user-name">Art User</div>
+                            <div class="user-plan">Professional Plan</div>
+                        </div>
+                    </div>
+                    <div class="user-menu" id="userMenu">
+                        <a href="#" onclick="showAppView('subscription'); return false;">
+                            <i class="fas fa-credit-card"></i> Subscription
+                        </a>
+                        <a href="#" onclick="backToMarketing(); return false;">
+                            <i class="fas fa-home"></i> Back to Home
+                        </a>
+                        <a href="#" onclick="logout(); return false;">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="content-area" id="appContent">
+                    <!-- Views will be rendered here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="artguard-ultimate.js"></script>
+    <script src="artguard-ultimate-part2.js"></script>
+</body>
+</html>
