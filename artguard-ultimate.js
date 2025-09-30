@@ -111,6 +111,97 @@ function initializeSampleData() {
             payout: 0,
             status: 'pending',
             createdDate: '2025-09-26'
+        },
+        {
+            id: 'alert4',
+            artworkId: 'art1',
+            title: 'Digital Portrait #23',
+            platform: 'Etsy',
+            url: 'https://etsy.com/listing/fake-art-print',
+            similarity: 97,
+            timeAgo: '5 hours ago',
+            priority: 'high',
+            payout: 45.00,
+            status: 'pending',
+            createdDate: '2025-09-29'
+        },
+        {
+            id: 'alert5',
+            artworkId: 'art3',
+            title: 'Character Design #47',
+            platform: 'Facebook Marketplace',
+            url: 'https://facebook.com/marketplace/item/12345',
+            similarity: 92,
+            timeAgo: '8 hours ago',
+            priority: 'high',
+            payout: 35.00,
+            status: 'pending',
+            createdDate: '2025-09-29'
+        },
+        {
+            id: 'alert6',
+            artworkId: 'art2',
+            title: 'Abstract Composition',
+            platform: 'DeviantArt',
+            url: 'https://deviantart.com/user/stolen-art',
+            similarity: 88,
+            timeAgo: '1 day ago',
+            priority: 'medium',
+            payout: 0,
+            status: 'pending',
+            createdDate: '2025-09-28'
+        },
+        {
+            id: 'alert7',
+            artworkId: 'art1',
+            title: 'Digital Portrait #23',
+            platform: 'Redbubble',
+            url: 'https://redbubble.com/shop/stolen-design',
+            similarity: 96,
+            timeAgo: '2 days ago',
+            priority: 'high',
+            payout: 29.99,
+            status: 'pending',
+            createdDate: '2025-09-27'
+        },
+        {
+            id: 'alert8',
+            artworkId: 'art3',
+            title: 'Character Design #47',
+            platform: 'ArtStation',
+            url: 'https://artstation.com/fake-portfolio',
+            similarity: 91,
+            timeAgo: '3 days ago',
+            priority: 'medium',
+            payout: 0,
+            status: 'pending',
+            createdDate: '2025-09-26'
+        },
+        {
+            id: 'alert9',
+            artworkId: 'art2',
+            title: 'Abstract Composition',
+            platform: 'Tumblr',
+            url: 'https://tumblr.com/blog/art-thief',
+            similarity: 85,
+            timeAgo: '4 days ago',
+            priority: 'low',
+            payout: 0,
+            status: 'pending',
+            createdDate: '2025-09-25'
+        },
+        {
+            id: 'alert10',
+            artworkId: 'art1',
+            title: 'Digital Portrait #23',
+            platform: 'TikTok Shop',
+            url: 'https://tiktok.com/@seller/shop/item',
+            similarity: 93,
+            timeAgo: '5 days ago',
+            priority: 'high',
+            payout: 18.50,
+            status: 'pending',
+            createdDate: '2025-09-24'
         }
     ];
     
@@ -630,8 +721,15 @@ function showArtworkDetail(artworkId) {
                     </div>
                 </div>
                 
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                    <button onclick="deleteArtwork('${artwork.id}')" style="padding: 0.75rem 1.5rem; background: #ef4444; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='#dc2626'" onmouseout="this.style.background='#ef4444'">
+                        <i class="fas fa-trash"></i> Delete Artwork
+                    </button>
+                    <p style="color: var(--text-light); font-size: 0.875rem; margin-top: 0.5rem;">⚠️ This will permanently delete this artwork and all related alerts</p>
+                </div>
+                
                 ${relatedAlerts.length > 0 ? `
-                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem;">Related Alerts</h3>
+                    <h3 style="margin-bottom: 1rem; font-size: 1.25rem; margin-top: 2rem;">Related Alerts</h3>
                     ${relatedAlerts.map(alert => `
                         <div onclick="showAlertDetail('${alert.id}')" style="padding: 1.5rem; border-left: 4px solid #ef4444; background: #fef2f2; border-radius: 8px; cursor: pointer; margin-bottom: 1rem; transition: transform 0.2s;" onmouseover="this.style.transform='translateX(5px)'" onmouseout="this.style.transform='translateX(0)'">
                             <div style="font-weight: 600; margin-bottom: 0.5rem;">${alert.title}</div>
@@ -642,6 +740,33 @@ function showArtworkDetail(artworkId) {
             </div>
         </div>
     `;
+}
+
+function deleteArtwork(artworkId) {
+    if (!confirm('Are you sure you want to delete this artwork? This will also remove all related alerts and cases.')) {
+        return;
+    }
+    
+    // Remove artwork
+    APP_STATE.artworks = APP_STATE.artworks.filter(a => a.id !== artworkId);
+    
+    // Remove related alerts
+    APP_STATE.alerts = APP_STATE.alerts.filter(a => a.artworkId !== artworkId);
+    
+    // Remove related cases
+    APP_STATE.cases = APP_STATE.cases.filter(c => c.artworkId !== artworkId);
+    
+    saveToLocalStorage();
+    showAppView('artworks');
+    
+    // Show success message
+    setTimeout(() => {
+        const toast = document.createElement('div');
+        toast.style.cssText = 'position: fixed; top: 2rem; right: 2rem; background: #10b981; color: white; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 10000;';
+        toast.innerHTML = '<i class="fas fa-check-circle"></i> Artwork deleted successfully';
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
+    }, 300);
 }
 
 // ====================
